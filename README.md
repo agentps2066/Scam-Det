@@ -1,12 +1,12 @@
-# Scam-Det: Autonomous Fraud Intelligence API 🛡️
+# ScamTrap: Autonomous Fraud Intelligence API
 
-Scam-Det is a highly scalable, stateful, LLM-powered API backend designed for enterprise fraud defense. It operates as an autonomous honeypot, designed to intercept inbound communications from scammers, dynamically engage them via intelligent multi-agent personas, and silently extract actionable threat intelligence (UPI IDs, bank accounts, phishing URLs, and phone numbers).
+ScamTrap is a highly scalable, stateful, LLM-powered API backend designed for enterprise fraud defense. It operates as an autonomous honeypot, designed to intercept inbound communications from scammers, dynamically engage them via intelligent multi-agent personas, and silently extract actionable threat intelligence (UPI IDs, bank accounts, phishing URLs, and phone numbers).
 
 This repository provides the core headless API infrastructure intended for programmatic integration into your existing security operations or communication pipelines (e.g., Twilio, WhatsApp Business API, email gateways).
 
 ## Architectural Overview
 
-The core of Scam-Det is the **Chameleon Brain**, a sophisticated multi-agent pipeline built on LangChain. It replaces static, rule-based auto-replies with dynamic, context-aware conversations.
+The core of ScamTrap is the **Chameleon Brain**, a sophisticated multi-agent pipeline built on LangChain. It replaces static, rule-based auto-replies with dynamic, context-aware conversations.
 
 1. **Incoming Message:** Your system routes a suspected scam message to the `/api/honeypot` endpoint.
 2. **The Profiler:** If it's a new conversation, the AI automatically generates a victim persona (e.g., a panicked senior citizen for tech support scams, or a greedy student for job scams).
@@ -34,7 +34,7 @@ HONEYPOT_API_KEY=your_secure_api_key_here
 
 OPENROUTER_API_KEY=your_openrouter_api_key
 
-# ⚠️ CRITICAL: We strongly recommend flagship paid models for optimal performance.
+# CRITICAL: We strongly recommend flagship paid models for optimal performance.
 # Free or quantized models often struggle with the complex negative constraints and 
 # multi-agent roleplay required by the Chameleon Brain, leading to hallucinations.
 LLM_MODEL=anthropic/claude-3.5-sonnet
